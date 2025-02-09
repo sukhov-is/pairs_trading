@@ -1,0 +1,9 @@
+*.csv
+*.tsv
+logs/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+venv/
+env/
+.env

@@ -1,0 +1,58 @@
+# Параметры данных
+data:
+  start_date: "2020-01-01"
+  end_date: "2023-12-31"
+  data_dir: "data"
+  use_cache: true
+  cache_expire_days: 1
+
+# Параметры логирования
+logging:
+  log_dir: "logs"
+  level: "INFO"
+
+# Параметры визуализации
+visualization:
+  output_dir: "visualizations"
+
+# Параметры торговли
+trading:
+  initial_capital: 100000.0
+  commission: 0.001
+  max_positions: 5
+  max_pairs: 10
+
+# Параметры риск-менеджмента
+risk:
+  max_position_size: 0.2
+  max_portfolio_var: 0.02
+  confidence_level: 0.99
+  max_correlation: 0.7
+  max_drawdown: 0.15
+  risk_free_rate: 0.02
+
+# Параметры поиска пар
+pair_finder:
+  min_correlation: 0.7
+  max_p_value: 0.05
+  min_half_life: 1
+  max_half_life: 252
+
+# Параметры стратегии
+strategy:
+  window: 20
+  entry_zscore: 2.0
+  exit_zscore: 0.5
+  stop_loss: 0.02
+  take_profit: 0.03
+  position_size: 0.1
+  beta_hedge: true
+  vol_adjust: true
+
+# Параметры оптимизации
+optimization:
+  target: "sharpe"
+  method: "optuna"
+  n_trials: 100
+  cv_splits: 5
+  parallel: true
